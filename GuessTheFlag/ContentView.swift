@@ -10,30 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 30) {
-            HStack(spacing: 30) {
-                Text("1")
-                    .foregroundColor(.red)
-                Text("2")
-                    .foregroundColor(.purple)
-                Text("3")
-                    .foregroundColor(.orange)
-            }
-            HStack(spacing: 30) {
-                Text("4")
-                    .foregroundColor(.blue)
-                Text("5")
-                    .foregroundColor(.pink)
-                Text("6")
-                    .foregroundColor(.green)
-            }
-            HStack(spacing: 30) {
-                Text("7")
-                    .foregroundColor(.yellow)
-                Text("8")
-                    .foregroundColor(.gray)
-                Text("9")
-            }
+        ZStack {
+            //Color.red.edgesIgnoringSafeArea(.all)
+            //LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            //RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200).edgesIgnoringSafeArea(.all)
+            AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green,.blue, .purple, .red]), center: .center).edgesIgnoringSafeArea(.all)
+            Text("Your content")
         }
     }
 }
